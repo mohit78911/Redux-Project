@@ -5,7 +5,7 @@ import wish from "./slice/wishlist"
 const store = configureStore({
   reducer: {
     cart: mm,
-    wish :wish,
+    wish :wish
   },
 });
 export default store;

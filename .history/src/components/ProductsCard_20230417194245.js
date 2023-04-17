@@ -46,12 +46,12 @@ function ProductsCard(props) {
         >
           {isAdded ? "Added" : "Add To Cart"}
         </button>
-        <button
+        {/* <button
           className={`btn ${isWished ? "Wished" : " "}`}
           onClick={handleWishList}
         >
           {isWished ? "Wished" : "Wishlist"}
-        </button>
+        </button> */}
       </div>
     </div>
   );

@@ -4,10 +4,10 @@ import { wishItems } from "../store/slice/wishlist";
 
 function Header() {
   const { cartItems } = useSelector((state) => state.cart);
-  const { wishItems } = useSelector((state) => state.wish);
 
+ 
   const cartQuantity = cartItems.length;
-  const wishQuantity = wishItems.length;
+  const wishQuantity = wishItems
   return (
     <div>
       <header id="header">
@@ -22,12 +22,6 @@ function Header() {
               >
                 <img src="/image/bag-icon.svg" alt="bag-icon" />
                 <span className="badge">{cartQuantity}</span>
-                <img
-                  src="https://icons.veryicon.com/png/o/commerce-shopping/fine-edition-mall-icon/wishlist-1.png"
-                  width={30}
-                  alt="wish-icon"
-                />
-                <span className="badge">{wishQuantity}</span>
               </div>
             </div>
           </div>

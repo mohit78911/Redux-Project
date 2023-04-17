@@ -1,11 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 import mm from "./slice/cartSlice";
-import wish from "./slice/wishlist"
+import wish from "./s"
 
 const store = configureStore({
   reducer: {
     cart: mm,
-    wish :wish,
   },
 });
 export default store;

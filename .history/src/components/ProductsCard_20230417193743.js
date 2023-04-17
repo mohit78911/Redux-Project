@@ -7,10 +7,10 @@ function ProductsCard(props) {
   const { img, rating, title, price } = props;
 
   const [isAdded, setIsAdded] = useState(false);
-  const [isWished, setIsWished] = useState(false);
+
   const dispatch = useDispatch();
 
-  const handleAddToCart = () => {
+  const handleAddToCart = () => { 
     const item = { ...props };
     dispatch(addItem(item));
     setIsAdded(true);
@@ -20,21 +20,13 @@ function ProductsCard(props) {
     }, 3000);
   };
 
-  const handleWishList = () => {
-    const item = { ...props };
-
-    dispatch(wishItems(item));
-    setIsWished(true);
-    setTimeout(() => {
-      setIsWished(false);
-    }, 3000);
-  };
+  const handle
   return (
     <div>
       <div className="product_card">
         <figure>
           <img src={img} alt="item-img" />
-          <img src={img} alt="wish-list" />
+        <img src={img} alt="wish-list"/>
         </figure>
         <strong className="rating">{rating}</strong>
         <h4 className="title">{title}</h4>
@@ -46,12 +38,8 @@ function ProductsCard(props) {
         >
           {isAdded ? "Added" : "Add To Cart"}
         </button>
-        <button
-          className={`btn ${isWished ? "Wished" : " "}`}
-          onClick={handleWishList}
-        >
-          {isWished ? "Wished" : "Wishlist"}
-        </button>
+        <button className="btn" onClick={}>Wishlist</button>
+
       </div>
     </div>
   );
